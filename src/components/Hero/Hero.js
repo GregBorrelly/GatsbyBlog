@@ -23,7 +23,7 @@ const Hero = props => {
       <style jsx>{`
        
         .banner-part-one{
-          color:#FFA500;
+          color:#81bf00;
         }
         .banner-part-two{
           color:white;
