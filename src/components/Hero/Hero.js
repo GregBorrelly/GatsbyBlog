@@ -10,7 +10,9 @@ const Hero = props => {
     <React.Fragment>
       <section className="hero">
         <h1>
-          Full-stack development with <br></br> <strong>Greg</strong> 
+          <span className="banner-part-one">JS </span> 
+          <span className="banner-part-one">&#x7b;</span>  Coffee <span className="banner-part-one">	&#x7d;</span>
+          <span className="banner-part-two"> Break </span>   
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
@@ -19,6 +21,13 @@ const Hero = props => {
 
       {/* --- STYLES --- */}
       <style jsx>{`
+       
+        .banner-part-one{
+          color:#FFA500;
+        }
+        .banner-part-two{
+          color:white;
+        }
         .hero {
           align-items: center;
           background: ${theme.hero.background};
