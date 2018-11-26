@@ -1,6 +1,6 @@
 module.exports = {
-  siteTitle: "Greg Borrelly", // <title>
-  shortSiteTitle: "Greg Borrelly", // <title> ending for posts and pages
+  siteTitle: "JS Coffee Break", // <title>
+  shortSiteTitle: "JS Coffee Break", // <title> ending for posts and pages
   siteDescription: "Blog & thinking space.",
   siteUrl: "https://gregborrelly.com",
   // pathPrefix: "",
@@ -16,8 +16,8 @@ module.exports = {
   headerSubTitle: "Senior Engineer",
 
   /* manifest.json */
-  manifestName: "Greg Borrelly",
-  manifestShortName: "Greg B", // max 12 characters
+  manifestName: "JSCoffeeBreak",
+  manifestShortName: "JSCB", // max 12 characters
   manifestStartUrl: "/index.html",
   manifestBackgroundColor: "white",
   manifestThemeColor: "#666",

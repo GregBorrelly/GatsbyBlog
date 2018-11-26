@@ -170,6 +170,41 @@ class Layout extends React.Component {
                         width: auto;
                         display: block;
                       }
+                      blockquote{
+                        font-size: 1.4em;
+                        width: 100%;
+                        margin: 50px auto;
+                        font-family: Open Sans;
+                        font-style: italic;
+                        color: #000000;
+                        padding: 1.2em 30px 1.2em 75px;
+                        border-left: 8px solid #709425;
+                        line-height: 1.6;
+                        position: relative;
+                        background: #f9f9f9;
+                      }
+                      
+                      blockquote::before{
+                        font-family:Arial;
+                       
+                        color:#78C0A8;
+                        font-size:4em;
+                        position: absolute;
+                        left: 10px;
+                        top:-10px;
+                      }
+                      
+                      blockquote::after{
+                        content: '';
+                      }
+                      
+                      blockquote span{
+                        display:block;
+                        color:#333333;
+                        font-style: normal;
+                        font-weight: bold;
+                        margin-top:1em;
+                      }
                     `}</style>
                   </React.Fragment>
                 </ScreenWidthContext.Provider>
