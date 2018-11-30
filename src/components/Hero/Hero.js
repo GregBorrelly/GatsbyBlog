@@ -6,13 +6,14 @@ import { FaArrowDown } from "react-icons/fa/";
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
 
-  return (
-    <React.Fragment>
+  return <React.Fragment>
       <section className="hero">
         <h1>
-          <span className="banner-part-one">JS </span> 
-          <span className="banner-part-one">&#x7b;</span>  Coffee <span className="banner-part-one">	&#x7d;</span>
-          <span className="banner-part-two"> Break </span>   
+          <span className="banner-part-one">JS </span>
+          <span className="banner-part-one">
+            &#x7b;
+          </span> Coffee <span className="banner-part-one"> &#x7d;</span>
+          <span className="banner-part-two"> Break </span>
         </h1>
         <button onClick={scrollToContent} aria-label="scroll">
           <FaArrowDown />
@@ -21,12 +22,11 @@ const Hero = props => {
 
       {/* --- STYLES --- */}
       <style jsx>{`
-       
-        .banner-part-one{
-          color:#81bf00;
+        .banner-part-one {
+          color: #81bf00;
         }
-        .banner-part-two{
-          color:white;
+        .banner-part-two {
+          color: white;
         }
         .hero {
           align-items: center;
@@ -95,8 +95,7 @@ const Hero = props => {
           }
         }
 
-        @keyframes buttonIconMove {
-          0% {
+        @keyframes buttonIconMove {0% {
             transform: translateY(0);
           }
           50% {
@@ -104,12 +103,11 @@ const Hero = props => {
           }
           100% {
             transform: translateY(0);
-          }
-        }
+          }}
 
-        @from-width tablet {
-          .hero {
-            background-image: url(${backgrounds.tablet});
+        @from-width tablet {.hero {
+            background: rgb(126, 76, 177);
+            background: linear-gradient(90deg, rgba(126, 76, 177, 1) 0%, rgba(85, 30, 135, 1) 41%, rgba(57, 6, 107, 1) 100%);
           }
 
           h1 {
@@ -119,12 +117,11 @@ const Hero = props => {
 
           button {
             font-size: ${theme.font.size.l};
-          }
-        }
+          }}
 
-        @from-width desktop {
-          .hero {
-            background-image: url(${backgrounds.desktop});
+        @from-width desktop {.hero {
+            background: rgb(126, 76, 177);
+            background: linear-gradient(90deg, rgba(126, 76, 177, 1) 0%, rgba(85, 30, 135, 1) 41%, rgba(57, 6, 107, 1) 100%);
           }
 
           h1 {
@@ -134,11 +131,8 @@ const Hero = props => {
 
           button {
             font-size: ${theme.font.size.xl};
-          }
-        }
-      `}</style>
-    </React.Fragment>
-  );
+          }}`}</style>
+    </React.Fragment>;
 };
 
 Hero.propTypes = {
