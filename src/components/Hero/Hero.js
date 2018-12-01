@@ -1,22 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import Coffee from '../../images/png/coffee-cup.png'
 import { FaArrowDown } from "react-icons/fa/";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
 
-  return (
-    <React.Fragment>
+  return <React.Fragment>
       <section className="hero">
-        <h1>
-          <span className="banner-part-one">JS </span> 
-          <span className="banner-part-one">&#x7b;</span>  Coffee <span className="banner-part-one">	&#x7d;</span>
-          <span className="banner-part-two"> Break </span>   
-        </h1>
-        <button onClick={scrollToContent} aria-label="scroll">
-          <FaArrowDown />
-        </button>
+        <h1>JS Coffee Break</h1>
+        <img src={Coffee} alt="" srcset="" />
       </section>
 
       {/* --- STYLES --- */}
@@ -30,8 +23,7 @@ const Hero = props => {
         }
         .hero {
           align-items: center;
-          background: ${theme.hero.background};
-          background-image: url(${backgrounds.mobile});
+          background: linear-gradient(0deg,#4d4e4e,#320740);
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
@@ -41,15 +33,19 @@ const Hero = props => {
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
+          border-bottom-left-radius: 50% 20%;
+          border-bottom-right-radius: 50% 20%;
         }
 
         h1 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
-          color: ${theme.hero.h1.color};
+          color: #ffaf80;
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Open Sans";
+          font-family: 'Sedgwick Ave', cursive;
+
 
           :global(strong) {
             position: relative;
@@ -109,7 +105,7 @@ const Hero = props => {
 
         @from-width tablet {
           .hero {
-            background-image: url(${backgrounds.tablet});
+            // background-image: url(${backgrounds.tablet});
           }
 
           h1 {
@@ -124,7 +120,7 @@ const Hero = props => {
 
         @from-width desktop {
           .hero {
-            background-image: url(${backgrounds.desktop});
+            // background-image: url(${backgrounds.desktop});
           }
 
           h1 {
@@ -137,8 +133,7 @@ const Hero = props => {
           }
         }
       `}</style>
-    </React.Fragment>
-  );
+    </React.Fragment>;
 };
 
 Hero.propTypes = {
