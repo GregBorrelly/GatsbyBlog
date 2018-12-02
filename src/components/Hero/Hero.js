@@ -8,13 +8,20 @@ const Hero = props => {
 
   return <React.Fragment>
       <section className="hero">
-        <h1>JS Coffee Break</h1>
-        <img src={Coffee} alt="" srcset="" />
+        <h1>JS Coffee Break    
+           <img src={Coffee} alt=""  className="coffeeIcon" srcset="" />
+        </h1>
+       
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
-       
+
+      
+        .coffeeIcon{
+          height: 51px;
+          padding-left: 15px;
+        }
         .banner-part-one{
           color:#81bf00;
         }
@@ -23,25 +30,25 @@ const Hero = props => {
         }
         .hero {
           align-items: center;
-          background: linear-gradient(0deg,#4d4e4e,#320740);
+          background: #020102;
           background-size: cover;
           color: ${theme.text.color.primary.inverse};
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 100vh;
+          min-height: 46vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
-          border-bottom-left-radius: 50% 20%;
-          border-bottom-right-radius: 50% 20%;
+          // border-bottom-left-radius: 50% 20%;
+          // border-bottom-right-radius: 50% 20%;
         }
 
         h1 {
           text-align: center;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
-          color: #ffaf80;
+          color: #f7f356;
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Open Sans";
           font-family: 'Sedgwick Ave', cursive;
