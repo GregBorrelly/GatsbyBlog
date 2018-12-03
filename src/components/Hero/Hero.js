@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Coffee from '../../images/png/coffee-cup.png'
+import Coffee from "../../images/png/coffee-cup.png";
+import Shapes from '../../images/png/cof.png'
 import { FaArrowDown } from "react-icons/fa/";
 
 const Hero = props => {
@@ -8,19 +9,33 @@ const Hero = props => {
 
   return <React.Fragment>
       <section className="hero">
-        <h1>JS Coffee Break    
-           <img src={Coffee} alt=""  className="coffeeIcon" srcset="" />
+        <h1>
+          JS Coffee Break <img src={Shapes} alt="" className="coffeeIcon" />
         </h1>
-       
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon fill="white" points="0,100 100,0 100,100" />
+        </svg>
+
+        {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <polygon class="svg--sm" fill="white" points="0,0 30,100 65,21 90,100 100,75 100,100 0,100" />
+          <polygon class="svg--lg" fill="white" points="0,0 15,100 33,21 45,100 50,75 55,100 72,20 85,100 95,50 100,80 100,100 0,100" />
+        </svg> */}
       </section>
 
       {/* --- STYLES --- */}
       <style jsx>{`
-
-      
+  
+      svg {
+   position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10vw;
+}
         .coffeeIcon{
-          height: 51px;
-          padding-left: 15px;
+              height: 92px;
+    padding-left: 1px;
+    position: relative;
+    top: 22px;
         }
         .banner-part-one{
           color:#81bf00;
@@ -29,14 +44,14 @@ const Hero = props => {
           color:white;
         }
         .hero {
+          position:relative;
           align-items: center;
-          background: #020102;
-          background-size: cover;
+          background: linear-gradient(360deg,#224f6f 10%,#1f1f1f 360%);
           color: ${theme.text.color.primary.inverse};
           display: flex;
           flex-flow: column nowrap;
           justify-content: center;
-          min-height: 46vh;
+          min-height: 47vh;
           height: 100px;
           padding: ${theme.space.inset.l};
           padding-top: ${theme.header.height.homepage};
@@ -46,9 +61,10 @@ const Hero = props => {
 
         h1 {
           text-align: center;
+          margin-left: 1vw;
           font-size: ${theme.hero.h1.size};
           margin: ${theme.space.stack.l};
-          color: #f7f356;
+          color:white;
           line-height: ${theme.hero.h1.lineHeight};
           text-remove-gap: both 0 "Open Sans";
           font-family: 'Sedgwick Ave', cursive;

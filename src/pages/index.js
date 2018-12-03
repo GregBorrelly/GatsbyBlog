@@ -38,16 +38,19 @@ class IndexPage extends React.Component {
       mobile
     };
 
-    return (
-      <React.Fragment>
+    return <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
-            <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
+            <Hero
+              scrollToContent={this.scrollToContent}
+              backgrounds={backgrounds}
+              theme={theme}
+            />
           )}
         </ThemeContext.Consumer>
-
+        <h3 className="blog-head">Latest Posts</h3>
         <hr ref={this.separator} />
-
+        <img src="../images/png/coffee-cup.png" alt="" />
         <ThemeContext.Consumer>
           {theme => <Blog posts={posts} theme={theme} />}
         </ThemeContext.Consumer>
@@ -59,9 +62,16 @@ class IndexPage extends React.Component {
             margin: 0;
             border: 0;
           }
-        `}</style>
-      </React.Fragment>
-    );
+          .blog-head {
+            text-align: center;
+            /* padding-top: 8px; */
+            position: relative;
+            top: 1vh;
+            font-size: 2.4em;
+            color: #184965;
+            font-family: "Sedgwick Ave", cursive;
+          }`}</style>
+      </React.Fragment>;
   }
 }
 
