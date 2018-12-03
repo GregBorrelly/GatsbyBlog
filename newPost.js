@@ -5,13 +5,13 @@ const month = date.getMonth() + 1;
 const day = date.getDate();
 const name =process.argv[2]
 
-const newPost = `${year}-${month}-${day}--${name}`
+const newPost = `${year}-${month}-${day}--${name}`;
 
-fs.mkdirSync(`content/posts/${newPost}`)
+fs.mkdirSync(`content/draft-posts/${newPost}`);
 
-let stream = fs.createWriteStream(`content/posts/${newPost}/index.md`);
+let stream = fs.createWriteStream(`content/draft-posts/${newPost}/index.md`);
 
-stream.once('open', function(fd) {
+stream.once("open", function(fd) {
   stream.write("---\n");
   stream.write("title:''\n");
   stream.write("cover:''\n");
