@@ -38,14 +38,11 @@ class IndexPage extends React.Component {
       mobile
     };
 
-    return <React.Fragment>
+    return (
+      <React.Fragment>
         <ThemeContext.Consumer>
           {theme => (
-            <Hero
-              scrollToContent={this.scrollToContent}
-              backgrounds={backgrounds}
-              theme={theme}
-            />
+            <Hero scrollToContent={this.scrollToContent} backgrounds={backgrounds} theme={theme} />
           )}
         </ThemeContext.Consumer>
         <h3 className="blog-head">Latest Posts</h3>
@@ -70,8 +67,10 @@ class IndexPage extends React.Component {
             font-size: 2.4em;
             color: #184965;
             font-family: "Sedgwick Ave", cursive;
-          }`}</style>
-      </React.Fragment>;
+          }
+        `}</style>
+      </React.Fragment>
+    );
   }
 }
 

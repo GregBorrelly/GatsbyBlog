@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Coffee from "../../images/png/coffee-cup.png";
-import Shapes from '../../images/png/cof.png'
+import Shapes from "../../images/png/cof.png";
 import { FaArrowDown } from "react-icons/fa/";
 
 const Hero = props => {
   const { scrollToContent, backgrounds, theme } = props;
 
-  return <React.Fragment>
+  return (
+    <React.Fragment>
       <section className="hero">
         <h1>
           JS Coffee Break <img src={Shapes} alt="" className="coffeeIcon" />
@@ -156,7 +157,8 @@ const Hero = props => {
           }
         }
       `}</style>
-    </React.Fragment>;
+    </React.Fragment>
+  );
 };
 
 Hero.propTypes = {
