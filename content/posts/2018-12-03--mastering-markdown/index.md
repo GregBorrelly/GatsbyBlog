@@ -1,51 +1,39 @@
 ---
 title: "Mastering Markdown"
 author: "Greg Borrelly"
+category: 'none'
 cover: photo-1465070845512-2b2dbdc6df66.jpg
 ---
 
-## Markdown Reference 
-
-
-| type          | Operator                       |
-| ------------- | :----------------------------: |
-| Code          | \`\`\`${languague} Code \`\`\` |
-| h1            | \#                             |
-| zebra stripes | are neat                       |
-
-
-## Markdown Cheatcheet
-## Markdown Table 
-## Markdown Links 
-## Markdown Image 
-## Markdown Code 
-## Markdown list 
-
-
-Learning how to write markdown is  
-
-
-Throughout my journey as a software developer, if there's a technology that I have completely ignored, it is Markdown. With all the new libraries coming out. I'll admit learning markup is not sexiest things but boy have I reaped the benefits. Github has a set of tools that allow you to use markdown without writing it, and whatever features are missing can be quickly looked up on the internet. So, this begs the question, why bother learning it?
-
-The first reason is that learning markdown takes about ten minutes. The second reason was somewhat unexpected, I began using my new found skills. I found myself writing better PRs. The act of stopping to think how I could best convey the reason for my PR, and the act of thinking about how I could use markdown to improve the engagement with what I was saying.
-
-but before we begin, let's take a step back. So what exactly it's markdown...
 
 The mundane sound of the word markup hides how cool the technology actually is. According to the gurus in Wikipedia.
 
 > Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats
 
-A lightbulb went on in my head when I read that sentence. There are two big take aways from that sentence
+A lightbulb went on in my head when I read that sentence. There are two big take aways: 
 
 1. Markdown gives you a way to create HTML elements
 2. Because after markdown gets transpiled it creates HTML elements, how those HTML elements look on the page is entirely up to the CSS on the site in which the markdown lives.
 
-So how can we use markdown in order to superpower our PR? the rest of this tutorial will concentrate on creating a PR using markdown. We will be writing the markdown to create this PR
+Markdown was created with the intent of making reading and writing prose a more efficient endevour. 
 
-![](./PR.PNG)
+## Creating Links 
 
-- [x] It will make your PRs easier to read.
-- [x] Markdown is common to many domains. I'm writing this entire blog post in markdown.
+Markdown 
+```markdown
+    <linkSource>
+```
+
+Example
+```markdown
+    <www.google.com>
+```
+
+HTML
+```javascript
+    <a href="google.com">Click me</a>
+```
+
 
 ## Creating Images
 
@@ -68,20 +56,23 @@ Lets put that syntax to use with
     <img src="https://unsplash.it/100/100?random" alt="This is a random image" /> 
 ```
 
+## Creating Blockquotes
 
-## Creating Links using Markdown
-
-**HTML**
-```html
-    <a href="google.com">Click me</a>
-```
-
-**Markdown**
+Markdown 
 ```markdown
-     [Click Me](https://www.google.com)
+    > This quote is awesome. 
 ```
 
-Similar to the syntax for creating images except without the `!` at the beginning of the line. 
+HTML
+```javascript
+    <blockquote>
+        This quote is awesome 
+    </blockquote>
+```
+
+Block quotes can contain nested markdown elements. So it's totally okay to do 
+
+>  Quote with a google link <www.google.com>
 
 
 ## Using variables in Markdown
@@ -103,13 +94,25 @@ Something the quickly aparent when using images is that adding long URLs can be 
     41. [randomImage]:https://unsplash.it/100/100?random
 ```
 
+## Creating Lists 
+Markdown 
+```markdown
+    1. apples 
+    1. Oranges 
+    1. Salami 
+```
 
+HTML
+```javascript
+    <ul>
+        <li> Apples </li>
+        <li> Oranges </li>
+        <li> Salami </li> 
+    </ul>
+```
 
-## lists
-
-## Checkboxes
-
-## Marking up text
-
-## Markdown Cheatcheet 
-[Cheatcheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
+If all else fails, remember that because markdown just gets transpiled to HTML. You can always write pure HTML instead of markdown.  
+ 
+##  Markdown Cheatcheet and Resources 
+1. <https://daringfireball.net/projects/markdown/>
+2. [Cheatcheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links)
