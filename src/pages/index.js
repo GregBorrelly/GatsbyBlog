@@ -5,7 +5,7 @@ import { ThemeContext } from "../layouts";
 import Blog from "../components/Blog";
 import Hero from "../components/Hero";
 import Seo from "../components/Seo";
-
+import "../images/custom.css"
 class IndexPage extends React.Component {
   separator = React.createRef();
 
